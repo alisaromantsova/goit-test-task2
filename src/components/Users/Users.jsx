@@ -22,7 +22,8 @@ export const Users = () => {
       setLoader(false);
     };
     fetch();
-  }, [page, usersArray]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page]);
 
   const handleClick = () => {
     setPage(page + 1);

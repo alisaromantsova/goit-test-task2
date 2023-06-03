@@ -26,7 +26,9 @@ export const User = ({ id, tweets, followers, isFollowed, avatar }) => {
     if (onBtn) {
       fetch(id, followersNumber, followingStatus);
     }
-  }, [onBtn, id, followersNumber, followingStatus]);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onBtn]);
 
   const onButtonClick = () => {
     followingStatus ? setFolowingStatus(false) : setFolowingStatus(true);
