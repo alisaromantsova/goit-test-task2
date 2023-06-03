@@ -19,7 +19,6 @@ export const Tweets = () => {
       setLoader(false);
     };
     fetch();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

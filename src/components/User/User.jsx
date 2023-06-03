@@ -26,8 +26,7 @@ export const User = ({ id, tweets, followers, isFollowed, avatar }) => {
     if (onBtn) {
       fetch(id, followersNumber, followingStatus);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onBtn]);
+  }, [onBtn, id, followersNumber, followingStatus]);
 
   const onButtonClick = () => {
     followingStatus ? setFolowingStatus(false) : setFolowingStatus(true);
@@ -37,10 +36,10 @@ export const User = ({ id, tweets, followers, isFollowed, avatar }) => {
 
   return (
     <li className={css.userCard}>
-      <img className={css.cardLogo} src={Logo} alt="" />
-      <img className={css.cardFone} src={fone} alt="" />
+      <img width="76" height="22" className={css.cardLogo} src={Logo} alt="GoIT Logo" />
+      <img width="308" height="168" className={css.cardFone} src={fone} alt="Background" />
       <div className={css.cardLine}></div>
-      <img className={css.cardAvatar} src={avatar} alt="" />
+      <img width="80" height="80" className={css.cardAvatar} src={avatar} alt="Avatar" />
       <div className={css.description}>
         <Link to="/tweets" className={css.cardLink}>
           {tweets} Tweets
@@ -53,7 +52,7 @@ export const User = ({ id, tweets, followers, isFollowed, avatar }) => {
         </button>
       )}
       {followingStatus && (
-        <button onClick={onButtonClick} className={css.cardButtonFollowed}>
+        <button type="button" onClick={onButtonClick} className={css.cardButtonFollowed}>
           Following
         </button>
       )}

@@ -28,7 +28,7 @@ npm start
 
 - Upon launching the application, user data will be fetched from the backend server and displayed as a list.
 - Use the pagination feature to navigate through the list of users.
-- Utilize the filter functionality to search for specific users based on criteria such as name, email, or any other available fields.
+- Utilize the filter functionality to search for specific users based on following or unfollowing user.
 
 ## Technologies Used
 

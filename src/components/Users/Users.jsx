@@ -12,7 +12,7 @@ export const Users = () => {
   const [page, setPage] = useState(1);
   const [loader, setLoader] = useState(false);
   const [selectedValue, setSelectedValue] = useState("All");
-  console.log(page);
+
   useEffect(() => {
     const fetch = async () => {
       setLoader(true);
@@ -22,8 +22,7 @@ export const Users = () => {
       setLoader(false);
     };
     fetch();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
+  }, [page, usersArray]);
 
   const handleClick = () => {
     setPage(page + 1);
