@@ -1,0 +1,12 @@
+.div {
+  width: 1236px;
+  margin: auto;
+}
+.link {
+  display: block;
+  margin-top: 30px;
+  text-decoration: underline;
+}
+.div {
+  padding-top: 40px;
+}
